@@ -32,11 +32,11 @@ export default function Home() {
           <motion.div className="px-8 md:px-0 text-2xl md:text-4xl text-center">
             <RedoText
               texts={[
-                `What's the $NOSTR?`,
+                `What's $NOSTR?`,
                 `It's the first meme on Lighting Network.`,
                 `What? Just a memecoin?`,
                 `No!`,
-                `It's the preacher for Lighting and NOSTR.`,
+                `We will make Lightning Network and Nostr ubiquitous!`,
               ]}
               textSize={isMobile ? 24 : 36}
             />
