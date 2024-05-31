@@ -35,7 +35,6 @@ const TokenInfo = () => {
   const isMobile = useMobile()
   const targetRef = useRef(null)
   const tokenomicsContentRef = useRef<HTMLDivElement>(null)
-  const aboutTokenContentRef = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -61,7 +60,8 @@ const TokenInfo = () => {
   const aboutTokenContentProgress = useTransform(
     scrollYProgress,
     [0.7, 1],
-    [0, aboutTokenContentRef.current?.offsetHeight || 250]
+    // 250 is the height on pc and 200 is the height on mobile
+    [0, isMobile ? 200 : 250]
   )
 
   return (
@@ -87,17 +87,14 @@ const TokenInfo = () => {
           className="px-8 md:px-0 overflow-hidden"
           style={{ height: aboutTokenContentProgress }}
         >
-          <div
-            ref={aboutTokenContentRef}
-            className="pb-4 flex w-full overflow-x-scroll"
-          >
+          <div className="pb-4 flex w-full overflow-x-scroll">
             {memes.map((meme, index) => (
               <Image
                 key={index}
                 className="mr-[50px] last:mr-0 rounded-xl"
                 src={meme}
-                width={isMobile ? 200 : 216}
-                height={isMobile ? 200 : 216}
+                width={isMobile ? 200 : 250}
+                height={isMobile ? 200 : 250}
                 alt="$NOSTR"
               />
             ))}
