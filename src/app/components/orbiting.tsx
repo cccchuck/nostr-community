@@ -7,11 +7,13 @@ import OrbitingCircles from '@/components/magic-ui/orbiting-circles'
 import useMobile from '@/hooks/useMobile'
 
 import Logo from '@/assets/logo.jpg'
+import BTC_LOGO from '@/assets/btc.svg'
+import LL_LOGO from '@/assets/ll.svg'
+import LNFI_LOGO from '@/assets/lnfi.svg'
 
 const BTC_WEBSITE = 'https://bitcoin.org'
 const LL_WEBSITE = 'https://lightning.engineering'
 const LNFI_WEBSITE = 'https://lnfi.network'
-const NOSTR_WEBSITE = 'https://nostr.com'
 
 const ORBITING_CONFIG_MOBILE = {
   btc: {
@@ -108,7 +110,7 @@ const Orbiting = ({ style }: { style?: MotionStyle }) => {
         >
           <Link href={BTC_WEBSITE} target="_blank">
             <Image
-              src="/btc.svg"
+              src={BTC_LOGO}
               alt="Bitcoin"
               width={orbitingConfig.btc.width}
               height={orbitingConfig.btc.height}
@@ -125,7 +127,7 @@ const Orbiting = ({ style }: { style?: MotionStyle }) => {
         >
           <Link href={LL_WEBSITE} target="_blank">
             <Image
-              src="/ll.svg"
+              src={LL_LOGO}
               alt="Lightning Labs"
               width={orbitingConfig.ll.width}
               height={orbitingConfig.ll.height}
@@ -142,7 +144,7 @@ const Orbiting = ({ style }: { style?: MotionStyle }) => {
         >
           <Link href={LNFI_WEBSITE} target="_blank">
             <Image
-              src="/lnfi.svg"
+              src={LNFI_LOGO}
               alt="LnFi"
               width={orbitingConfig.lnfi.width}
               height={orbitingConfig.lnfi.height}
