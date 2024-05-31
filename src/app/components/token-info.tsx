@@ -59,9 +59,9 @@ const TokenInfo = () => {
   )
   const aboutTokenContentProgress = useTransform(
     scrollYProgress,
-    [0.7, 1],
+    [0.7, isMobile ? 0.9 : 1],
     // 250 is the height on pc and 200 is the height on mobile
-    [0, isMobile ? 200 : 250]
+    [0, isMobile ? 216 : 250]
   )
 
   return (
