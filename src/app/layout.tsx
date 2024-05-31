@@ -7,6 +7,17 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: '$NOSTR Community',
   description: '$NOSTR will go the moon',
+  openGraph: {
+    type: 'website',
+    url: 'https://nostr.community',
+    title: '$NOSTR Community',
+    description: 'The first memecoin on Lightning Network',
+    images: [
+      {
+        url: 'https://nostr.community/logo.png',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({
