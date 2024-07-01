@@ -7,6 +7,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/discord',
+        destination: 'https://discord.gg/r9bQZn6hst',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig
