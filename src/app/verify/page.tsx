@@ -87,7 +87,7 @@ export default function Verify() {
   }
 
   return (
-    <main className="font-mono">
+    <>
       <div className="pt-24 md:pt-32 max-w-[960px] mx-auto h-screen">
         <p className="mb-24 md:mb-32 px-8 md:px-0 text-3xl md:text-5xl text-center font-bold">
           Welcome to $NOSTR community
@@ -133,6 +133,6 @@ export default function Verify() {
           </>
         )}
       </div>
-    </main>
+    </>
   )
 }

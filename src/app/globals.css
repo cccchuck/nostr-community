@@ -2,33 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255; */
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
+.body {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: scroll;
-  color: rgb(var(--foreground-rgb));
   background: #000;
+  color: #fff;
+  /* Create stacking context */
+  z-index: 0;
 }
 
-body::after {
+.body::after {
   content: '';
   position: fixed;
   top: 0;
