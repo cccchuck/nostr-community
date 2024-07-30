@@ -14,6 +14,11 @@ const nextConfig = {
         destination: 'https://discord.gg/r9bQZn6hst',
         permanent: true,
       },
+      {
+        source: '/lnfi-summer',
+        destination: 'https://nostr-community.gitbook.io/lnfi-summer',
+        permanent: true,
+      },
     ]
   },
 }
